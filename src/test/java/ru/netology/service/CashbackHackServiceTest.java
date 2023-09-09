@@ -1,14 +1,14 @@
 package ru.netology.service;
 
-
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
+
 
 public class CashbackHackServiceTest {
 
     @Test
-    void shouldReturn100IfAmountIs900() {
+    public void shouldReturn100IfAmountIs900() {
         CashbackHackService hackService = new CashbackHackService();
 
         int actual = hackService.remain(900);
@@ -18,7 +18,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldReturn200IfAmountIs1800() {
+    public void shouldReturn200IfAmountIs1800() {
         CashbackHackService hackService = new CashbackHackService();
 
         int actual = hackService.remain(1800);
@@ -28,7 +28,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldReturn900IfAmountIs100() {
+    public void shouldReturn900IfAmountIs100() {
         CashbackHackService hackService = new CashbackHackService();
 
         int actual = hackService.remain(100);
@@ -38,7 +38,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldReturn1000IfAmountIs0() {
+    public void shouldReturn1000IfAmountIs0() {
         CashbackHackService hackService = new CashbackHackService();
 
         int actual = hackService.remain(0);
@@ -48,7 +48,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldReturn999IfAmountIs1() {
+    public void shouldReturn999IfAmountIs1() {
         CashbackHackService hackService = new CashbackHackService();
 
         int actual = hackService.remain(1);
