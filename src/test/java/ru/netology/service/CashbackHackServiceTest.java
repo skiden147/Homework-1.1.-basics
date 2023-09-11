@@ -17,25 +17,6 @@ public class CashbackHackServiceTest {
         assertEquals(expected, actual);
     }
 
-    @Test
-    public void shouldReturn200IfAmountIs1800() {
-        CashbackHackService hackService = new CashbackHackService();
-
-        int actual = hackService.remain(1800);
-        int expected = 200;
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void shouldReturn900IfAmountIs100() {
-        CashbackHackService hackService = new CashbackHackService();
-
-        int actual = hackService.remain(100);
-        int expected = 900;
-
-        assertEquals(expected, actual);
-    }
 
     @Test
     public void shouldReturn1000IfAmountIs0() {
@@ -57,4 +38,13 @@ public class CashbackHackServiceTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void shouldReturn0IfAmountIs1000() {
+        CashbackHackService hackService = new CashbackHackService();
+
+        int actual = hackService.remain(1000);
+        int expected = 0;
+
+        assertEquals(expected, actual);
+    }
 }
